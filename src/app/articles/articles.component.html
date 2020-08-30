@@ -1,0 +1,35 @@
+<div style="padding: 13px;">
+    <mat-spinner *ngIf="items.length === 0"></mat-spinner>
+  
+    <mat-card  *ngFor="let article of items1, let indexOfelement=index;" style="margin-top:10px;">
+      <div>
+        <mat-card-header>
+            <mat-card-title class = "titlearticle" style = "cursor: pointer;" (click)="conClickArticle(indexOfelement)">Title : {{article.title}}</mat-card-title>
+            <mat-card-subtitle>Web Page: {{article.url}}</mat-card-subtitle>
+            <mat-card-subtitle>Author: {{article.by}}</mat-card-subtitle>
+            <mat-card-subtitle><mat-icon style = "cursor: pointer;" matTooltip = "comments(toggle)" (click) = "onLoadComments(indexOfelement)">comment</mat-icon></mat-card-subtitle>
+       </mat-card-header>
+        <!-- <mat-card-content>
+        </mat-card-content>
+        <mat-card-actions>  -->
+    <!-- </mat-card-actions> -->
+      </div>
+      <mat-icon class = "bookmark" (click) = "onCLickBookmark(indexOfelement)" [ngClass]="{'change_icon_color': article.bookmarked}">favorite</mat-icon>
+      <mat-accordion style = " position: relative; top: 15px;" *ngIf = "article.isPanelExpanded">
+          <mat-expansion-panel (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false" *ngFor="let comments of article.commentss | slice :0: loadtwomorecomments, let indexOfelementt=index;">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Comments
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>{{comments}}</p>
+        </mat-expansion-panel>
+        <div style = "cursor: pointer;" (click) = "load2morecomments()">show more ..</div>
+      </mat-accordion>
+  
+    </mat-card>
+  </div>

@@ -1,0 +1,37 @@
+<div class="container">
+  <!-- 
+<mat-tab-group>
+    <mat-tab label="First"> Content 1 </mat-tab>
+    <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+  </mat-tab-group> -->
+  <p style = "margin: 0;">
+    <mat-toolbar style= "height: 70px;" color="primary">
+      <button [routerLink]="['/home']" mat-raised-button (click) = "onclickhome()" style= "position: relative;left: 50px" class="example-ripple-container-home mat-elevation-z4">
+        <mat-icon>home</mat-icon>
+        <div class = "textsections">Home</div>
+    </button>
+  
+        <span class="example-spacer"></span>
+        <button [routerLink]="['/articles']" mat-raised-button class="example-ripple-container-home mat-elevation-z4">
+            <mat-icon>menu</mat-icon>
+            <div class = "textsections">Articles</div>
+        </button>
+      
+      <span class="example-spacer"></span>
+      <button [routerLink]="['/bookmarks']" mat-raised-button matBadge = {{message}} matBadgeColor="accent" style= "position: relative;right: 50px" class="example-ripple-container-bookmarks mat-elevation-z4">
+        <mat-icon [ngClass]="{'change_icon_color': message >= 1}" style= "right: 20px;position: relative;">favorite</mat-icon>
+        <div class = "textsections1">Bookmarks</div>
+        <!-- <mat-icon>share</mat-icon> -->
+    </button>
+    
+    <!-- <app-child></app-child> -->
+    </mat-toolbar>
+  </p>
+<div>
+
+
+
+</div>
+  <router-outlet></router-outlet>
+</div>

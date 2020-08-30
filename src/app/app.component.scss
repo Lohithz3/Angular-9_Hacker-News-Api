@@ -1,0 +1,67 @@
+.container {
+    // padding: 20px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+.example-ripple-container-home {
+    cursor: pointer;
+    text-align: center;
+    background: #30ab78;
+    width: 200px;
+    height: 45px;
+    line-height: 47px;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 18px;
+    display: inline-flex;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .example-ripple-container-home:hover {
+      background-color: #ff6161;
+  }
+
+  .example-ripple-container-bookmarks {
+    cursor: pointer;
+    text-align: center;
+    background: #30ab78;
+    width: 200px;
+    height: 45px;
+    line-height: 50px;
+    display: inline-flex;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    font-size: 18px;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .example-ripple-container-bookmarks:hover {
+    background-color: #ff6161;
+}
+
+.change_icon_color{
+  color: red !important;
+}
+
+.textsections{
+  bottom: 46px;
+    position: relative;
+    left: 70px;
+}
+
+.textsections1{
+    bottom: 50px;
+    position: relative;
+    left: 55px;
+}
+  
+  
